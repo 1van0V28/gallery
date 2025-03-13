@@ -9,74 +9,71 @@
     </head>
     <body>
         <header class="header">
-            <a class="header__link">GALLERY</a>
+            <a class="header__logo">GALLERY</a>
         </header>
         <main class="main">
             <div class="control_panel">
                 <div class="control_panel__filters">
                     <button class="control_panel__button_filters">filters</button>
                     <div class="control_panel__container_filters">
-                        <input class="control_panel__checkbox" type="checkbox" id="#forest"></input>
-                        <label class="control_panel__button_category" for="#forest"> #forest</label>
+                        <input class="control_panel__checkbox" type="checkbox" id="forest"></input>
+                        <label class="control_panel__button_category" for="forest">#forest</label>
                         
-                        <input class="control_panel__checkbox" type="checkbox" id="#city"></input>
-                        <label class="control_panel__button_category" for="#city">#city</label>
+                        <input class="control_panel__checkbox" type="checkbox" id="city"></input>
+                        <label class="control_panel__button_category" for="city">#city</label>
                         
-                        <input class="control_panel__checkbox" type="checkbox" id="#painting"></input>
-                        <label class="control_panel__button_category" for="#painting">#painting</label>
+                        <input class="control_panel__checkbox" type="checkbox" id="painting"></input>
+                        <label class="control_panel__button_category" for="painting">#painting</label>
+
+                        <button class="control_panel__button_apply">Применить</button>
                     </div>
                 </div>
             </div>
 
             <div class="gallery">
-                <div class="gallery__container_image">
+                <div class="gallery__container_image gallery__container_image--show">
                     <img class="gallery__image" src="./attachments/forest1.jpg"></img>
                     <div class="gallery__container_tegs">
                         <button class="gallery__button_teg">#forest</button> <!--при нажатии  фильтр переклюается на нажатый тег-->
-                        <button class="gallery__button_teg">#forest</button>
                     </div>
                 </div>
 
-                <div class="gallery__container_image">
+                <div class="gallery__container_image gallery__container_image--show">
                     <img class="gallery__image" src="./attachments/city1.webp"></img>
                     <div class="gallery__container_tegs">
                         <button class="gallery__button_teg">#city</button> <!--при нажатии  фильтр переклюается на нажатый тег-->
-                        <button class="gallery__button_teg">#city</button>
                     </div>
                 </div>
 
-                <div class="gallery__container_image"class="gallery__container_image">
+                <div class="gallery__container_image gallery__container_image--show">
                     <img class="gallery__image" src="./attachments/forest2.jpg"></img>
                     <div class="gallery__container_tegs">
                         <button class="gallery__button_teg">#forest</button> <!--при нажатии  фильтр переклюается на нажатый тег-->
-                        <button class="gallery__button_teg">#forest</button>
                     </div>
                 </div>
 
-                <div class="gallery__container_image">
+                <div class="gallery__container_image gallery__container_image--show">
                     <img class="gallery__image" src="./attachments/city2.webp"></img>
                     <div class="gallery__container_tegs">
                         <button class="gallery__button_teg">#city</button> <!--при нажатии  фильтр переклюается на нажатый тег-->
-                        <button class="gallery__button_teg">#city</button>
                     </div>
                 </div>
 
-                <div class="gallery__container_image">
+                <div class="gallery__container_image gallery__container_image--show">
                     <img class="gallery__image" src="./attachments/painting1.webp"></img>
                     <div class="gallery__container_tegs">
                         <button class="gallery__button_teg">#painting</button> <!--при нажатии  фильтр переклюается на нажатый тег-->
-                        <button class="gallery__button_teg">#painting</button>
                     </div>
                 </div>
 
-                <div class="gallery__container_image">
+                <div class="gallery__container_image gallery__container_image--show">
                     <img class="gallery__image" src="./attachments/painting2.webp"></img>
                     <div class="gallery__container_tegs">
                         <button class="gallery__button_teg">#painting</button> <!--при нажатии  фильтр переклюается на нажатый тег-->
-                        <button class="gallery__button_teg">#painting</button>
                     </div>
                 </div>
             </div>
         </main>
+        <script src="./index.js"></script>
     </body>
 </html>

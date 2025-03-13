@@ -10,6 +10,7 @@
     --orange: #ff9f1c;
     --light-orange: #ffbf69;
     --aquamarine: #2ec4b6;
+    --light-aquamarine: #cbf3f0;
     --white: #ffffff;
 }
 
@@ -33,7 +34,7 @@ body {
 }
 
 
-.header__link {
+.header__logo {
     margin: 0 0 2.5vh 0;
     font-size: 4.5rem;
     font-weight: 700;
@@ -73,34 +74,61 @@ body {
     border-radius: 2rem;
     color: var(--orange);
     cursor: pointer;
+    transition: background-color 0.1s linear;
+}
+
+.control_panel__button_filters:active {
+    background-color: var(--light-orange)
 }
 
 
 .control_panel__container_filters {
     opacity: 0;
     margin: 3.25rem 0 0 0;
-    padding: 0.5rem 5% 0.5rem 0.5rem;;
+    padding: 0.5rem;
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     border-radius: 10px;
     background-color: var(--white);
-    border: 2px solid var(--light-orange)
+    border: 2px solid var(--orange);
+    transition: opacity 0.25s linear;
+}
+
+.control_panel__container_filters--show {
+    opacity: 1;
+    z-index: 1;
 }
 
 
-.control_panel__button_category {
+.control_panel__button_category,
+.control_panel__button_apply {
     padding: 0.5rem;
     text-align: center;
     font-size: 1rem; 
-    border: 2px solid var(--light-orange);
+    border: 2px solid var(--aquamarine);
     border-radius: 2rem;
-    color: var(--light-orange);
+    background-color: var(--white);
+    color: var(--aquamarine);
     cursor: pointer;
     transition: background-color 0.25s linear,
-                color 0.25s linear;
+                border-color 0.25s linear;
 }
+
+
+.control_panel__button_apply {
+    background-color: var(--aquamarine);
+    color: var(--white);
+    transition: background-color 0.1s linear,
+                border-color 0.1s linear;
+}
+
+.control_panel__button_apply:active {
+    background-color: #27a59a;
+    border-color: #27a59a;
+}
+
 
 .control_panel__checkbox {
     display: none;
@@ -108,8 +136,7 @@ body {
 
 
 .control_panel__checkbox:checked + .control_panel__button_category {
-    background-color: #ffbf69;
-    color: var(--white)
+    background-color: var(--light-aquamarine);
 }
 
 
@@ -124,16 +151,21 @@ body {
     gap: 2.5vh;
     flex-wrap: wrap;
     width: 85%;
-    grid-template-columns: repeat(autofill, minmax(200px, 1fr));
 }
 
 
 .gallery__container_image {
+    opacity: 0;
     overflow: hidden;
     display: flex;
     width: var(--image-width);
     height: var(--image-height);
     border-radius: 10px;
+    transition: opacity 0.25s linear;
+}
+
+.gallery__container_image--show {
+    opacity: 1;
 }
 
 
@@ -160,4 +192,10 @@ body {
     background-color: var(--white);
     font-size: 0.75rem;
     color: var(--aquamarine);
+    cursor: pointer;
+    transition: background-color 0.1s linear;
+}
+
+.gallery__button_teg:active {
+    background-color: var(--light-aquamarine);
 }
