@@ -74,11 +74,23 @@ body {
     border-radius: 2rem;
     color: var(--orange);
     cursor: pointer;
-    transition: background-color 0.1s linear;
+    transition: background-color 0.1s linear,
+                border-color 0.1s linear,
+                color 0.1s linear;
 }
 
 .control_panel__button_filters:active {
     background-color: var(--light-orange)
+}
+
+.control_panel__button_filters--active {
+    background-color: var(--orange);
+    color: var(--white)
+}
+
+.control_panel__button_filters--active:active {
+    background-color: #e68a1c;
+    border-color: #e68a1c;
 }
 
 

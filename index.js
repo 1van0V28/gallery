@@ -45,8 +45,13 @@ const handleButtonFiltersApply = function(imageList) {
 }
 
 
-const handleCheckboxClick = function(checbox) {
+const handleCheckboxClick = function(checbox, buttonFilters) {
     STATE_FILTERS[checbox.id] = checbox.checked
+    if (!areFiltersClear()) {
+        buttonFilters.classList.add("control_panel__button_filters--active")
+    } else {
+        buttonFilters.classList.remove("control_panel__button_filters--active")
+    }
 }
 
 
@@ -75,7 +80,7 @@ buttonFilters.addEventListener("click", () => {handleButtonFiltersClick(buttonFi
 buttonFiltersApply.addEventListener("click", () => {handleButtonFiltersApply(imageList)})
 
 checkboxList.forEach((checkbox) => {
-    checkbox.addEventListener("click", () => {handleCheckboxClick(checkbox)})
+    checkbox.addEventListener("click", () => {handleCheckboxClick(checkbox, buttonFilters)})
 })
 imageTegList.forEach((imageTeg) => {
     imageTeg.addEventListener("click", () => {handleImageTegClick(imageTeg, imageList)})
